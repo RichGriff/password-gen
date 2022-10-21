@@ -193,8 +193,8 @@ function App() {
           <div className='py-4'>
             <p>Password Strength</p>
             <div className='flex flex-row mt-4'>
-              <div className={`${passwordStrength >= 25 && 'bg-red-500'} bg-gray-700 h-1 flex-1 rounded-sm mr-1`}></div>
-              <div className={`${passwordStrength >= 50 && 'bg-amber-500'} bg-gray-700 h-1 flex-1 rounded-sm mr-1`}></div>
+              <div className={`${passwordStrength >= 25 && 'bg-orange-800'} bg-gray-700 h-1 flex-1 rounded-sm mr-1`}></div>
+              <div className={`${passwordStrength >= 50 && 'bg-yellow-500'} bg-gray-700 h-1 flex-1 rounded-sm mr-1`}></div>
               <div className={`${passwordStrength >= 75 && 'bg-blue-500'} bg-gray-700 h-1 flex-1 rounded-sm mr-1`}></div>
               <div className={`${passwordStrength === 100 && 'bg-green-500'} bg-gray-700 h-1 flex-1 rounded-sm mr-1`}></div>
             </div>
