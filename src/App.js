@@ -92,6 +92,15 @@ function App() {
     }
   }
 
+  const contextClass = {
+    success: "bg-green-600",
+    error: "bg-red-500",
+    info: "bg-gray-600",
+    warning: "bg-orange-400",
+    default: "bg-indigo-600",
+    dark: "bg-white-600 font-gray-300",
+  };
+
   return (
     <div className="bg-gray-900 w-screen h-screen text-white p-4">
       <div className="flex flex-col justify-center items-center mx-auto p-2 md:p-10 w-full md:w-1/3 gap-2">
@@ -213,6 +222,10 @@ function App() {
             pauseOnFocusLoss
             pauseOnHover
             theme="colored"
+            toastClassName={({ type }) => contextClass[type || "default"] +
+              " relative flex p-3 h-16 rounded-md justify-between overflow-hidden cursor-pointer m-3"
+            }
+            // bodyClassName={() => "text-sm font-white font-med block p-3"}
           />
 
       </div>
