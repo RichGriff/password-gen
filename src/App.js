@@ -73,7 +73,7 @@ function App() {
   const notify = (message, hasError = false) => {
     if (hasError) {
       toast.error(message, {
-        position: 'top-center',
+        position: 'bottom-center',
         autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
@@ -81,8 +81,8 @@ function App() {
         progress: undefined,
       })
     } else {
-      toast(message, {
-        position: 'top-center',
+      toast.success(message, {
+        position: 'bottom-center',
         autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
@@ -93,8 +93,8 @@ function App() {
   }
 
   return (
-    <div className="bg-gray-900 w-screen h-screen text-white">
-      <div className="flex flex-col justify-center items-center mx-auto p-20 w-[600px] gap-2">
+    <div className="bg-gray-900 w-screen h-screen text-white p-4">
+      <div className="flex flex-col justify-center items-center mx-auto p-2 md:p-10 w-full md:w-1/3 gap-2">
         <h1 className='text-md text-white font-bold mb-3 tracking-wide'>Password Generator</h1>
 
         {/* Result */}
@@ -204,7 +204,7 @@ function App() {
         </div>
 
         <ToastContainer
-            position='top-center'
+            position='bottom-center'
             autoClose={2000}
             hideProgressBar={false}
             newestOnTop={false}
